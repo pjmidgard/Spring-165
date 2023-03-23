@@ -772,7 +772,7 @@ class compression:
                                     #os.system("pause")
                                     
                                     sda2=sda3
-                                    n = int(sda2, 2)
+                                    
                                                                                                     
                                             
                                                                                        
@@ -803,7 +803,7 @@ class compression:
                                         
                                             
                
-
+                                        n = int(sda3, 2)
                                         qqwslenf=len(sda3)
                                         qqwslenf=(qqwslenf/8)*2
                                         qqwslenf=str(qqwslenf)
