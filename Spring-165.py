@@ -432,12 +432,7 @@ class compression:
                                                     #print(sda2)
                                                     assxw1=assxw1+1
                                                     #print(assxw1)
-                                                    n = int(sda3, 2)
-                                                    qqwslenf=len(sda3)
-                                                    qqwslenf=(qqwslenf/8)*2
-                                                    qqwslenf=str(qqwslenf)
-                                                    qqwslenf="%0"+qqwslenf+"x"
-                                                    jl=binascii.unhexlify(qqwslenf % n)
+                                                    
                                             #print(jl)
                                             #print(Times_of_compression1)
 
@@ -445,6 +440,13 @@ class compression:
                                             if assxw1==505:
                                                     assxw1=0
                                                     assxw=0
+
+                                                    n = int(sda3, 2)
+                                                    qqwslenf=len(sda3)
+                                                    qqwslenf=(qqwslenf/8)*2
+                                                    qqwslenf=str(qqwslenf)
+                                                    qqwslenf="%0"+qqwslenf+"x"
+                                                    jl=binascii.unhexlify(qqwslenf % n)
                                                     
                                                     assxw2=1
                                                     if assxw2==1:
