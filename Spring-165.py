@@ -201,11 +201,11 @@ class compression:
                                                 sda4=""
                                                 block3=0
                                                 lenf2=len(sda2)
-                                                count1=256
                                                 count4=-1
+                                                
                                                 while block3<lenf2:
                                                 	count4+=1
-                                                	count1-=1
+                                               
                                                 	e4=sda2[block3:block3+8]
                                                 	Chanel=format(count4,'08b')
                                                 	Chanel1=format(count1,'08b')
@@ -219,22 +219,14 @@ class compression:
 			                                                sda3+=e4
 			                                                block3+=8
 			                                                
-                                                	elif e4[0:8]==count1 and count1==count1:
-			                                                e4="11111111"
-			                                                sda3+=e4
-			                                                block3+=8
-                                                	elif e4[0:8]=="11111111" and count4==count4:
-			                                                e4=Chanel1
-			                                                sda3+=e4
-			                                                block3+=8
+
                                                 	else:
 			                                               
 			                                                sda3+=e4
 			                                                block3+=8
                                                 	if count4==255:
                                                 	   count4=0
-                                                	if count1==0:
-                                                		count1=256
+                                          
 					                                           
 	                                            #print(e5)
 	                                            
@@ -388,15 +380,15 @@ class compression:
                                     #######################################################Jurijus Pacalovas Exection Program######################################################################################
                                     #print(len(sda2))
                                   
-                                    count1=256
+                                 
                                     count4=-1
                                     while block3<lenf2:
                                         count4+=1
-                                        count1-=1
+                                      
                                        
                                         e4=sda2[block3:block3+8]
                                         Chanel=format(count4,'08b')
-                                        Chanel1=format(count1,'08b')
+                                        
                                         
                                      
 
@@ -410,22 +402,14 @@ class compression:
                                                 e4=Chanel
                                                 sda3+=e4
                                                 block3+=8
-                                        elif e4[0:8]==count1 and count1==count1:
-                                                e4="11111111"
-                                                sda3+=e4
-                                                block3+=8
-                                        elif e4[0:8]=="11111111" and count4==count4:
-                                                e4=Chanel1
-                                                sda3+=e4
-                                                block3+=8                                    	
+                                 	
                                         else:
                                                
                                                 sda3+=e4
                                                 block3+=8       
                                         if count4==255:
                                             count4=0
-                                        if count1==0:
-                                            count1=256
+                                 
                                      
 
                             
