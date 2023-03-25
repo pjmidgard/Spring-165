@@ -202,30 +202,30 @@ class compression:
                                                 block3=0
                                                 lenf2=len(sda2)
                                                 count4=-1
+                                                count1=-1
                                                 
                                                 while block3<lenf2:
-                                                	count4+=1
-                                               
-                                                	e4=sda2[block3:block3+8]
-                                                	Chanel=format(count4,'08b')
-                                                	Chanel1=format(count1,'08b')
-                                                	if e4[0:8]==count4 and count4==count4:
-			                                                e4="00000000"
-			                                                sda3+=e4
-			                                                block3+=8
-  
-                                                	elif e4[0:8]=="00000000" and count4==count4:
-			                                                e4=Chanel
-			                                                sda3+=e4
-			                                                block3+=8
-			                                                
-
-                                                	else:
-			                                               
-			                                                sda3+=e4
-			                                                block3+=8
-                                                	if count4==255:
-                                                	   count4=0
+                                                        count4+=1
+                                                        count1+=1
+                                                        if count1==65535:
+                                                        	count4-=65535
+                                                        if count1==255:
+                                                        	count4-=255
+                                                        e4=sda2[block3:block3+16]
+                                                        Chanel=format(count4,'016b')
+                                                        if e4[0:8]==count4 and count4==count4:
+                                                        	e4="0000000000000000"
+                                                        	sda3+=e4
+                                                        	block3+=16
+                                                        elif e4[0:8]=="0000000000000000" and count4==count4:
+                                                        	e4=Chanel
+                                                        	sda3+=e4
+                                                        	block3+=16
+                                                        else:
+                                                        	sda3+=e4
+                                                        	block3+=16
+                                                        if count4==65535:
+                                                        	count4=0
                                           
 					                                           
 	                                            #print(e5)
@@ -380,14 +380,20 @@ class compression:
                                     #######################################################Jurijus Pacalovas Exection Program######################################################################################
                                     #print(len(sda2))
                                   
-                                 
+                                    count=-1
                                     count4=-1
                                     while block3<lenf2:
                                         count4+=1
+                                        count1+=1
+                                        if count1==65535:
+                                        	count4-=65535
+                                        if count1==255:
+                                        	count4-=255
+                                        	
                                       
                                        
-                                        e4=sda2[block3:block3+8]
-                                        Chanel=format(count4,'08b')
+                                        e4=sda2[block3:block3+16]
+                                        Chanel=format(count4,'016b')
                                         
                                         
                                      
@@ -395,19 +401,19 @@ class compression:
                                         
                                         
                                         if e4[0:8]==count4 and count4==count4:
-                                                e4="00000000"
+                                                e4="0000000000000000"
                                                 sda3+=e4
-                                                block3+=8
-                                        elif e4[0:8]=="00000000" and count4==count4:
+                                                block3+=16
+                                        elif e4[0:8]=="0000000000000000" and count4==count4:
                                                 e4=Chanel
                                                 sda3+=e4
-                                                block3+=8
+                                                block3+=16
                                  	
                                         else:
                                                
                                                 sda3+=e4
-                                                block3+=8       
-                                        if count4==255:
+                                                block3+=16   
+                                        if count4==65535:
                                             count4=0
                                  
                                      
