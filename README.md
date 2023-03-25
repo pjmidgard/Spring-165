@@ -7,3 +7,5 @@ pip install cython
 
 pip install paq 
 
+Author: Jurijus Pacalovas 
+
