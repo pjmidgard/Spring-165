@@ -202,14 +202,14 @@ class compression:
                                                 block3=0
                                                 lenf2=len(sda2)
                                                 count4=-1
-                                                count1=-1
+                                                
                                                 
                                                 while block3<lenf2:
                                                         count4+=1
-                                                        count1+=1
-                                                        if count1==65535:
+                                                        
+                                                        if count4==65535:
                                                         	count4-=65535
-                                                        if count1==255:
+                                                        if count4==255:
                                                         	count4-=255
                                                         e4=sda2[block3:block3+16]
                                                         Chanel=format(count4,'016b')
@@ -380,14 +380,14 @@ class compression:
                                     #######################################################Jurijus Pacalovas Exection Program######################################################################################
                                     #print(len(sda2))
                                   
-                                    count=-1
+                                
                                     count4=-1
                                     while block3<lenf2:
                                         count4+=1
-                                        count1+=1
-                                        if count1==65535:
+                                     
+                                        if count4==65535:
                                         	count4-=65535
-                                        if count1==255:
+                                        if count4==255:
                                         	count4-=255
                                         	
                                       
