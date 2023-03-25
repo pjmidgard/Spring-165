@@ -213,7 +213,7 @@ class compression:
                                                         	count4-=255
                                                         e4=sda2[block3:block3+16]
                                                         Chanel=format(count4,'016b')
-                                                        if e4[0:8]==count4 and count4==count4:
+                                                        if e4[0:8]==Chanel and count4==count4:
                                                         	e4="0000000000000000"
                                                         	sda3+=e4
                                                         	block3+=16
@@ -400,7 +400,7 @@ class compression:
 
                                         
                                         
-                                        if e4[0:8]==count4 and count4==count4:
+                                        if e4[0:8]==Chanel and count4==count4:
                                                 e4="0000000000000000"
                                                 sda3+=e4
                                                 block3+=16
