@@ -1,4 +1,9 @@
 # Spring-165
 Spring-165
-Reverse data
+
+Reverse data + paq
+
+pip install cython
+
+pip install paq 
 
