@@ -338,7 +338,7 @@ class compression:
                             lenf5=len(data)
                             
                             if lenf1>(2**26)-1 or  lenf1<(1024):
-                                print("This file is too big or too small");
+                                print("This file is too big or is too small");
                                 raise SystemExit
                             if lenf1==0:
                             	raise SystemExit
@@ -401,23 +401,31 @@ class compression:
                                     	N1=N%((2**10)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
+                                    if N5==0:
+                                    	print("Number is  too small")
+                                    	raise SystemExit
                                     long61=len(Bias)
-                                    long62=len(sda2[:N2])
+                                    long62=len(sda2[long-N2:])
                                     NS=long61
                                     NS1=N8-long62
                                     NS2=NS1-1-long61
+                                    Nj=len(bin(N2)[2:])
+                                    #print(Nj)
+                                    if Nj>(2**5)-1:
+                                        print("Number is too big")
+                                        raise SystemExit
                                     
                                     
                                     
-                                    C="0"+str(NS2)+"b"
-                                    Nj=0
+                                    C="0"+str(5)+"b"
+                                    
                                     Bias2=format(Nj,C)   
                                     sda3=Bias+sda3 
                                     #print(Bias)
                                     #print(N5)                       	
                                     
                                    
-                                    sda3=Bias+sda2[:N2]+Bias2
+                                    sda3=Bias+sda2[long-N2:]+Bias2
                                     #print(N2)
 
 
@@ -442,12 +450,27 @@ class compression:
                                     assxw3+=1  
                                     if len(sda2)<=8184:
                                                                                                                                                                                                                                 
-			                                                                                                                                                                                                                      	                                    											
-			                                                                                                                                                                                                                      	                                    										  
-	                                  
-                                    	assxw=1
-                                    	T=format(assxw3,'032b')
-                                    	sda3=T+sda3
+														                                                                                      
+														                                                                                                                                                                                                                                                                   
+											                                                                                        sda3="1"+sda3
+											                                                                                        lenf=len(sda3)
+											                                                                                        add_bits118=""
+											                                                                                        count_bits=8-lenf%8
+											                                                                                        z=0
+											                                                                                       
+											                                                                                        if count_bits!=8:
+											                                                                                                while z<count_bits:
+											                                                                                                    add_bits118="0"+add_bits118
+											                                                                                                    z=z+1
+											
+											                                                                                                    
+											                                        
+											                                                                                        
+											                                                                                        
+											                                                                                        sda3=add_bits118+sda3
+											                                                                                        assxw=1
+											                                                                                        T=format(assxw3,'032b')
+											                                                                                        sda3=T+sda3
                                     
                                     
                                     #print(assxw)
