@@ -449,7 +449,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=8184:
+                                    if len(sda2)<=8192 or assxw3==255:
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
@@ -470,7 +470,7 @@ class compression:
 											                                                                                        
 											                                                                                        sda3=add_bits118+sda3
 											                                                                                        assxw=1
-											                                                                                        T=format(assxw3,'032b')
+											                                                                                        T=format(assxw3,'08b')
 											                                                                                        sda3=T+sda3
                                     
                                     
