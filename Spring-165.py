@@ -438,16 +438,49 @@ class compression:
 	                                    
 	                                    	
 	                                    	N=int(sda2[long-N2:],2)
+	                                    
 	                                    	if N11==0:
 	                                    		N11=(2**24)-1
 	                                 
 	                                    	N5=N//(N11)
 	                                    	
 	                                    	N1=N%(N11)
+	                                    	
+	                                 
+	                                   
 	                                    	#print(N5)
 	                                    	if N1==0 and N5!=0:
 	                                    		N6=1
+                                    	N1=1
+                                    	N5=0
+                                    	N6=0
+                                    	N12=(2**24)
+                                       
+                                        
+                                     
                                     
+                                    	
+                                    	while N6!=1:
+                                    		N12-=1
+                                    		#print(N12)
+                                    	
+	                                    	long=len(sda2)
+	                                    
+	                                    	
+	                                    	N=int(sda2[:long-N2],2)
+	                                    
+	                                    	if N12==0:
+	                                    		N12=(2**24)-1
+	                                 
+	                                    	N5=N//(N12)
+	                                    	
+	                                    	N1=N%(N12)
+	                                    	
+	                                 
+	                                   
+	                                    	#print(N5)
+	                                    	if N1==0 and N5!=0:
+	                                    		N6=1                                    
                                     Bias3=format(N2,C)   	   
                                     sda3=Bias+sda3 
                                     #print(Bias)
@@ -502,7 +535,8 @@ class compression:
 											                                                                                        T=format(assxw3,'08b')
 											                                                                                        T3=format(Bias4,'032b')
 											                                                                                        T4=format(N11,'024b')
-											                                                                                        sda3=T4+T3+T1+T+sda3
+											                                                                                        T5=format(N12,'024b')
+											                                                                                        sda3=T5+T4+T3+T1+T+sda3
                                     
                                     
                                     #print(assxw)
