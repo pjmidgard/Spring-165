@@ -421,6 +421,29 @@ class compression:
                                     if assxw3==0:
                                     	Bias2=format(N2,C)
                                     	Bias4=len(str(int(sda2[long-N2:],2)))
+                                    	N1=1
+                                    	N5=0
+                                    	N6=0
+                                    	N11=(2**24)
+                                       
+                                        
+                                     
+                                    
+                                    	
+                                    	while N6!=1:
+                                    		N11-=1
+                                    		#print(N11)
+                                    	
+	                                    	long=len(sda2)
+	                                    
+	                                    	
+	                                    	N=int(sda2[long-N2:],2)
+	                                 
+	                                    	N5=N//(N11)
+	                                    	
+	                                    	N1=N%(N11)
+	                                    	if N1==0 and N5!=0:
+	                                    		N6=1
                                     
                                     Bias3=format(N2,C)   	   
                                     sda3=Bias+sda3 
@@ -475,7 +498,8 @@ class compression:
 											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'08b')
 											                                                                                        T3=format(Bias4,'032b')
-											                                                                                        sda3=T3+T1+T+sda3
+											                                                                                        T4=format(N11,'024b')
+											                                                                                        sda3=T4+T3+T1+T+sda3
                                     
                                     
                                     #print(assxw)
