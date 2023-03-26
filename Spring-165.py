@@ -438,10 +438,13 @@ class compression:
 	                                    
 	                                    	
 	                                    	N=int(sda2[long-N2:],2)
+	                                    	if N11==0:
+	                                    		N11=(2**24)-1
 	                                 
 	                                    	N5=N//(N11)
 	                                    	
 	                                    	N1=N%(N11)
+	                                    	#print(N5)
 	                                    	if N1==0 and N5!=0:
 	                                    		N6=1
                                     
