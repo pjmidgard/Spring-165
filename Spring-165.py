@@ -481,7 +481,8 @@ class compression:
 	                                    	#print(N5)
 	                                    	if N1==0 and N5!=0:
 	                                    		N6=1                                    
-                                    Bias3=format(N2,C)   	   
+                                    Bias3=format(N2,C)
+                                    	   
                                     sda3=Bias+sda3 
                                     #print(Bias)
                                     #print(N5)                       	
@@ -536,8 +537,8 @@ class compression:
 											                                                                                        T3=format(Bias4,'032b')
 											                                                                                        T4=format(N11,'024b')
 											                                                                                        T5=format(N12,'024b')
-											                                                                                        T6=format(Bias3,'032b')
-											                                                                                        sda3=T6+T5+T4+T3+T1+T+sda3
+											                                                                                      
+											                                                                                        sda3=T5+T4+T3+T1+T+sda3
                                     
                                     
                                     #print(assxw)
