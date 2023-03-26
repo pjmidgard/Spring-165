@@ -1,11 +1,7 @@
 # Spring-165
 Spring-165
 
-Reverse data + paq
-
-pip install cython
-
-pip install paq 
+Bias Divide: Divide numbers in Bias.
 
 Author: Jurijus Pacalovas 
 
