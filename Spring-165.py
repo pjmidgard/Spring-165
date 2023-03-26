@@ -419,7 +419,8 @@ class compression:
                                     
                                     C="0"+str((2**5)-1)+"b"
                                     if assxw3==0:
-                                    	Bias2=format(N2,C)   
+                                    	Bias2=format(N2,C)
+                                    Bias3=format(N2,C)   	   
                                     sda3=Bias+sda3 
                                     #print(Bias)
                                     #print(N5)                       	
@@ -452,7 +453,7 @@ class compression:
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
-											                                                                                        sda3="1"+Bias2+sda3
+											                                                                                        sda3="1"+Bias3+Bias2+sda3
 											                                                                                        lenf=len(sda3)
 											                                                                                        add_bits118=""
 											                                                                                        count_bits=8-lenf%8
