@@ -536,7 +536,8 @@ class compression:
 											                                                                                        T3=format(Bias4,'032b')
 											                                                                                        T4=format(N11,'024b')
 											                                                                                        T5=format(N12,'024b')
-											                                                                                        sda3=T5+T4+T3+T1+T+sda3
+											                                                                                        T6=format(Bias3,'032b')
+											                                                                                        sda3=T6+T5+T4+T3+T1+T+sda3
                                     
                                     
                                     #print(assxw)
