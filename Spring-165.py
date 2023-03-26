@@ -420,6 +420,8 @@ class compression:
                                     C="0"+str((2**5)-1)+"b"
                                     if assxw3==0:
                                     	Bias2=format(N2,C)
+                                    	Bias4=len(str(int(sda2[long-N2:],2)))
+                                    
                                     Bias3=format(N2,C)   	   
                                     sda3=Bias+sda3 
                                     #print(Bias)
@@ -472,7 +474,8 @@ class compression:
 											                                                                                        assxw=1
 											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'08b')
-											                                                                                        sda3=T1+T+sda3
+											                                                                                        T3=format(assxw3,'032b')
+											                                                                                        sda3=T3+T1+T+sda3
                                     
                                     
                                     #print(assxw)
