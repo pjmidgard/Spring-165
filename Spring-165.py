@@ -474,7 +474,7 @@ class compression:
 											                                                                                        assxw=1
 											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'08b')
-											                                                                                        T3=format(assxw3,'032b')
+											                                                                                        T3=format(Bias4,'032b')
 											                                                                                        sda3=T3+T1+T+sda3
                                     
                                     
