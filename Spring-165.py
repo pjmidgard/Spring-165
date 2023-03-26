@@ -470,8 +470,9 @@ class compression:
 											                                                                                        
 											                                                                                        sda3=add_bits118+sda3
 											                                                                                        assxw=1
+											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'08b')
-											                                                                                        sda3=T+sda3
+											                                                                                        sda3=T1+T+sda3
                                     
                                     
                                     #print(assxw)
