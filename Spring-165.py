@@ -228,7 +228,7 @@ class compression:
                                 Times_compress=int(sda2[88:112],2)
                                 Bias_file=int(sda2[24:56],2)
                                 Divide_Number=int(sda2[0:24],2)
-                                C1="0"+str(Long_file)+"b"
+                                C1="0"+str(Long_file*8)+"b"
                                 N_Start=0
                                 Start_file=""
                                 Finish_file=""
