@@ -232,9 +232,12 @@ class compression:
                                 N_Start=0
                                 Start_file=""
                                 Finish_file=""
+                                Finish_file1=""
+                                Finish_file2=""
                                 assxw=0
                                 Start_file=format(N_Start,C1)
-                                while Finish_file!=Start_file:
+                                Finish_file1=sda2
+                                while Finish_file1!=Finish_file2:
                                     Start_file=format(N_Start,C1)
                                     sda2=Start_file
                                     block3=0
@@ -383,10 +386,10 @@ class compression:
 											                                                                                     
 											                                                                                      
 											                                                                                        sda3=T4+T3+T1+T+sda3
-											                                                                                        Finish_file=sda3
+											                                                                                        Finish_file2=sda3
 											                                                                                        
-											                                                                                        if Finish_file==Start_file:
-											                                                                                            sda3=Finish_file
+											                                                                                        if Finish_file1==Finish_file2:
+											                                                                                            sda3=Start_file
 											                                                                                            assxw=1
 											                                                                                        else:
 											                                                                                            N_Start=N_Start+Divide_Number
