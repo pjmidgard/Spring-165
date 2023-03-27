@@ -387,6 +387,7 @@ class compression:
 											                                                                                      
 											                                                                                        sda3=T4+T3+T1+T+sda3
 											                                                                                        Finish_file2=sda3
+											                                                                                        assxw3=0
 											                                                                                        
 											                                                                                        if Finish_file1==Finish_file2:
 											                                                                                            sda3=Start_file
