@@ -238,8 +238,9 @@ class compression:
                                 Start_file=format(N_Start,C1)
                                 Finish_file1=sda2
                                 while Finish_file1!=Finish_file2:
-                                    Start_file=format(N_Start,C1)
-                                    sda2=Start_file
+                                    if assxw==0:
+                                    	Start_file=format(N_Start,C1)
+                                    	sda2=Start_file
                                     block3=0
                                     sda3=""
                                     sda5=""
