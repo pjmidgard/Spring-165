@@ -337,8 +337,8 @@ class compression:
                             lenf1=len(data)
                             lenf5=len(data)
                             
-                            if lenf1>(2**26)-1 or  lenf1<(1024):
-                                print("This file is too big or is too small");
+                            if lenf1>(2**26)-1:
+                                print("This file is too big");
                                 raise SystemExit
                             if lenf1==0:
                             	raise SystemExit
@@ -381,6 +381,7 @@ class compression:
                                     #######################################################Jurijus Pacalovas Exection Program######################################################################################
                                     #print(len(sda2))
                                     F=0
+                                    B=0
                                     count4=-1
                                  
                                     lenf2=len(sda2)
@@ -388,39 +389,45 @@ class compression:
                                     N2=-1
                                     N1=1
                                     N5=0
+                                    long2=1
                                     
                                     N8=len(sda2)
                                     while N1!=0:
                                     	N2+=1
                                     	long=len(sda2)
-                                    
+                                    	long2=long-N2
+                                    	if long2<=0:
+                                        	B=1
+                                        	N1=0
+                                    	if B==0:
+                                    		N=int(sda2[:long-N2],2)
+                                    		N5=N//((2**10)-1)
                                     	
-                                    	N=int(sda2[:long-N2],2)
-                                    	N5=N//((2**10)-1)
-                                    	
-                                    	N1=N%((2**10)-1)
+                                    		N1=N%((2**10)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
-                                    	print("Number is  too small")
-                                    	raise SystemExit
+                                    	B=1
                                     long61=len(Bias)
-                                    long62=len(sda2[long-N2:])
+                                    long62=0
+                                    if B==0:
+                                    	long62=len(sda2[long-N2:])
                                     NS=long61
                                     NS1=N8-long62
                                     NS2=NS1-1-long61
                                     Nj=len(bin(N2)[2:])
                                     #print(N2)
                                     if Nj>(2**5)-1:
-                                        print("Number is too big")
-                                        raise SystemExit
+                                        B=1
                                     
                                     
                                     
                                     C="0"+str((2**5)-1)+"b"
                                     if assxw3==0:
                                     	Bias2=format(N2,C)
-                                    	Bias4=len(str(int(sda2[long-N2:],2)))
+                                    	Bias4=0
+                                    	if B==0:
+                                    		Bias4=len(str(int(sda2[long-N2:],2)))
                                     	N1=1
                                     	N5=0
                                     	N6=0
@@ -437,7 +444,7 @@ class compression:
 	                                    	long=len(sda2)
 	                                    
 	                                    	
-	                                    	N=int(sda2[long-N2:],2)
+	                                    	N=int(sda2,2)
 	                                    
 	                                    	if N11==0:
 	                                    		N11=(2**24)-1
@@ -451,45 +458,15 @@ class compression:
 	                                    	#print(N5)
 	                                    	if N1==0 and N5!=0:
 	                                    		N6=1
-                                    	N1=1
-                                    	N5=0
-                                    	N6=0
-                                    	N12=(2**24)
-                                       
-                                        
-                                     
-                                    
-                                    	
-                                    	while N6!=1:
-                                    		N12-=1
-                                    		#print(N12)
-                                    	
-	                                    	long=len(sda2)
-	                                    
-	                                    	
-	                                    	N=int(sda2[:long-N2],2)
-	                                    
-	                                    	if N12==0:
-	                                    		N12=(2**24)-1
-	                                 
-	                                    	N5=N//(N12)
-	                                    	
-	                                    	N1=N%(N12)
-	                                    	
-	                                 
-	                                   
-	                                    	#print(N5)
-	                                    	if N1==0 and N5!=0:
-	                                    		N6=1                                    
+                                                            
                                     Bias3=format(N2,C)
                                     	   
-                                    sda3=Bias+sda3 
-                                    #print(Bias)
-                                    #print(N5)                       	
-                                    
-                                   
-                                    sda3=Bias+sda2[long-N2:]
+                               
+                                    if B==0:
+                                    	sda3="1"+Bias+sda2[long-N2:]
                                     #print(N2)
+                                    if B==1:
+                                    	sda3="0"+sda2
 
 
                                     
@@ -511,7 +488,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=8192 or assxw3==255:
+                                    if len(sda2)<=10000 or assxw3==((2**24)-1):
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
@@ -533,12 +510,12 @@ class compression:
 											                                                                                        sda3=add_bits118+sda3
 											                                                                                        assxw=1
 											                                                                                        T1=format(lenf1,'032b')
-											                                                                                        T=format(assxw3,'08b')
+											                                                                                        T=format(assxw3,'024b')
 											                                                                                        T3=format(Bias4,'032b')
 											                                                                                        T4=format(N11,'024b')
-											                                                                                        T5=format(N12,'024b')
+											                                                                                     
 											                                                                                      
-											                                                                                        sda3=T5+T4+T3+T1+T+sda3
+											                                                                                        sda3=T4+T3+T1+T+sda3
                                     
                                     
                                     #print(assxw)
