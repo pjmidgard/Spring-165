@@ -390,7 +390,7 @@ class compression:
 											                                                                                        
 											                                                                                        sda3=add_bits118+sda3
 											                                                                                        
-											                                                                                        T1=format(lenf1,'032b')
+											                                                                                        T1=format(Long_file,'032b')
 											                                                                                        T=format(assxw3,'024b')
 											                                                                                        T3=format(Bias4,'032b')
 											                                                                                        T4=format(N11,'024b')
