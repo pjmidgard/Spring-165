@@ -240,6 +240,7 @@ class compression:
                                 while Finish_file1!=Finish_file2:
                                     if assxw==0:
                                     	Start_file=format(N_Start,C1)
+                                    	#print(N_Start)
                                     	sda2=Start_file
                                     block3=0
                                     sda3=""
@@ -272,6 +273,9 @@ class compression:
                                         	N1=0
                                     	if B==0:
                                     		N=int(sda2[:long-N2],2)
+                                    		if N==0:
+                                    			B=1
+                                    			N1=0
                                     		N5=N//((2**10)-1)
                                     	
                                     		N1=N%((2**10)-1)
@@ -298,11 +302,12 @@ class compression:
                                     	Bias2=format(N2,C)
                                     	Bias4=0
                                     	if B==0:
-                                    		Bias4=len(str(int(sda2[long-N2:],2)))
+                                    		
+                                    		Bias4=len(str(int(sda2[:long-N2],2)))
                                     	N1=1
                                     	N5=0
                                     	N6=0
-                                    	N11=(2**24)
+                                    	N11=2**24
                                        
                                         
                                      
@@ -317,13 +322,18 @@ class compression:
 	                                    	
 	                                    	N=int(sda2,2)
 	                                    
-	                                    	if N11==0:
-	                                    		N11=(2**24)-1
+	                                    	
+	                                    
 	                                 
 	                                    	N5=N//(N11)
 	                                    	
 	                                    	N1=N%(N11)
-	                                    	
+	                                    	if N==0:
+	                                    		N11=1
+	                                    		N6=1
+	                                    	if N11==0:
+	                                    		N11=(2**24)-1
+	                                    		
 	                                 
 	                                   
 	                                    	#print(N5)
@@ -389,6 +399,7 @@ class compression:
 											                                                                                        sda3=T4+T3+T1+T+sda3
 											                                                                                        Finish_file2=sda3
 											                                                                                        assxw3=0
+											                                                                                        #print(assxw3)
 											                                                                                        
 											                                                                                        if Finish_file1==Finish_file2:
 											                                                                                            sda3=Start_file
@@ -585,6 +596,9 @@ class compression:
                                         	N1=0
                                     	if B==0:
                                     		N=int(sda2[:long-N2],2)
+                                    		if N==0:
+                                    			B=1
+                                    			N1=0
                                     		N5=N//((2**10)-1)
                                     	
                                     		N1=N%((2**10)-1)
@@ -611,11 +625,11 @@ class compression:
                                     	Bias2=format(N2,C)
                                     	Bias4=0
                                     	if B==0:
-                                    		Bias4=len(str(int(sda2[long-N2:],2)))
+                                    		Bias4=len(str(int(sda2[:long-N2],2)))
                                     	N1=1
                                     	N5=0
                                     	N6=0
-                                    	N11=(2**24)
+                                    	N11=2**24
                                        
                                         
                                      
@@ -629,7 +643,9 @@ class compression:
 	                                    
 	                                    	
 	                                    	N=int(sda2,2)
-	                                    
+	                                    	if N==0:
+	                                    		N11=1
+	                                    		N6=1	                                    
 	                                    	if N11==0:
 	                                    		N11=(2**24)-1
 	                                 
@@ -639,6 +655,8 @@ class compression:
 	                                    	
 	                                 
 	                                   
+	                                  
+	                                	                                   
 	                                    	#print(N5)
 	                                    	if N1==0 and N5!=0:
 	                                    		N6=1
