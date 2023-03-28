@@ -392,8 +392,8 @@ class compression:
 											                                                                                        
 											                                                                                        T1=format(Long_file,'032b')
 											                                                                                        T=format(assxw3,'024b')
-											                                                                                        T3=format(Bias4,'032b')
-											                                                                                        T4=format(N11,'056b')
+											                                                                                        T3=format(Bias4,'056b')
+											                                                                                        T4=format(N11,'032b')
 											                                                                                     
 											                                                                                      
 											                                                                                        sda3=T4+T3+T1+T+sda3
@@ -713,8 +713,8 @@ class compression:
 											                                                                                        assxw=1
 											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'024b')
-											                                                                                        T3=format(Bias4,'032b')
-											                                                                                        T4=format(N11,'056b')
+											                                                                                        T3=format(Bias4,'056b')
+											                                                                                        T4=format(N11,'032b')
 											                                                                                     
 											                                                                                      
 											                                                                                        sda3=T4+T3+T1+T+sda3
