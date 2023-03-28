@@ -393,11 +393,11 @@ class compression:
 											                                                                                        
 											                                                                                        T1=format(Long_file,'032b')
 											                                                                                        T=format(assxw3,'024b')
-											                                                                                        T3=format(Bias4,'056b')
+											                                                                                        
 											                                                                                        T4=format(N11,'032b')
 											                                                                                     
 											                                                                                      
-											                                                                                        sda3=T4+T3+T1+T+sda3
+											                                                                                        sda3=T4+T1+T+sda3
 											                                                                                        Finish_file2=sda3
 											                                                                                        assxw3=0
 											                                                                                        #print(assxw3)
