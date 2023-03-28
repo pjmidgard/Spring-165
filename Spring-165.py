@@ -224,10 +224,10 @@ class compression:
                                 
                                 
                                 
-                                Long_file=int(sda2[88:120],2)
+                                Long_file=int(sda2[32:64],2)
                                 #print(Long_file)
-                                Times_compress=int(sda2[120:144],2)
-                                Bias_file=int(sda2[32:88],2)
+                                Times_compress=int(sda2[64:88],2)
+                                
                                 Divide_Number=int(sda2[0:32],2)
                                 C1="0"+str(Long_file*8)+"b"
                                 N_Start=0
@@ -624,9 +624,9 @@ class compression:
                                     C="0"+str((2**5)-1)+"b"
                                     if assxw3==0:
                                     	Bias2=format(N2,C)
-                                    	Bias4=0
-                                    	if B==0:
-                                    		Bias4=len(str(int(sda2[:long-N2],2)))
+                                    	
+                                    	
+                                    	
                                     	N1=1
                                     	N5=0
                                     	N6=0
@@ -714,11 +714,11 @@ class compression:
 											                                                                                        assxw=1
 											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'024b')
-											                                                                                        T3=format(Bias4,'056b')
+											                                                                                        
 											                                                                                        T4=format(N11,'032b')
 											                                                                                     
 											                                                                                      
-											                                                                                        sda3=T4+T3+T1+T+sda3
+											                                                                                        sda3=T4+T1+T+sda3
                                     
                                     
                                     #print(assxw)
