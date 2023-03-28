@@ -225,9 +225,9 @@ class compression:
                                 
                                 
                                 Long_file=int(sda2[56:88],2)
-                                Times_compress=int(sda2[88:112],2)
-                                Bias_file=int(sda2[24:56],2)
-                                Divide_Number=int(sda2[0:24],2)
+                                Times_compress=int(sda2[120:152],2)
+                                Bias_file=int(sda2[88:120],2)
+                                Divide_Number=int(sda2[0:56],2)
                                 C1="0"+str(Long_file*8)+"b"
                                 N_Start=0
                                 Start_file=""
@@ -393,7 +393,7 @@ class compression:
 											                                                                                        T1=format(Long_file,'032b')
 											                                                                                        T=format(assxw3,'024b')
 											                                                                                        T3=format(Bias4,'032b')
-											                                                                                        T4=format(N11,'024b')
+											                                                                                        T4=format(N11,'056b')
 											                                                                                     
 											                                                                                      
 											                                                                                        sda3=T4+T3+T1+T+sda3
@@ -532,7 +532,7 @@ class compression:
                             lenf1=len(data)
                             lenf5=len(data)
                             
-                            if lenf1>(2**26)-1:
+                            if lenf1>(2**32)-1:
                                 print("This file is too big");
                                 raise SystemExit
                             if lenf1==0:
@@ -714,7 +714,7 @@ class compression:
 											                                                                                        T1=format(lenf1,'032b')
 											                                                                                        T=format(assxw3,'024b')
 											                                                                                        T3=format(Bias4,'032b')
-											                                                                                        T4=format(N11,'024b')
+											                                                                                        T4=format(N11,'056b')
 											                                                                                     
 											                                                                                      
 											                                                                                        sda3=T4+T3+T1+T+sda3
