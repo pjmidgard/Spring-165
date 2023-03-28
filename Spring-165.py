@@ -301,10 +301,10 @@ class compression:
                                     C="0"+str((2**5)-1)+"b"
                                     if assxw3==0:
                                     	Bias2=format(N2,C)
-                                    	Bias4=0
-                                    	if B==0:
+                                    	
+                                    
                                     		
-                                    		Bias4=len(str(int(sda2[:long-N2],2)))
+                                    		
                                     	N1=1
                                     	N5=0
                                     	N6=0
@@ -773,6 +773,9 @@ class compression:
 
 
    
+
+
+
             
                      
 
