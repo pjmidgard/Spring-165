@@ -305,41 +305,18 @@ class compression:
                                     
                                     		
                                     		
-                                    	N1=1
-                                    	N5=0
-                                    	N6=0
-                                    	N11=2**24
+                                    	
+                                    	
+                                    	
+                                    	N=int(sda2,2)
+                                    	if N==0:
+                                    	  N11=1
+                                    	else:
+                                    	  N11=Divide_Number
+                                    	  
                                        
                                         
-                                     
-                                    
-                                    	
-                                    	while N6!=1:
-                                    		N11-=1
-                                    		#print(N11)
-                                    	
-	                                    	long=len(sda2)
-	                                    
-	                                    	
-	                                    	N=int(sda2,2)
-	                                    
-	                                    	
-	                                    
-	                                 
-	                                    	N5=N//(N11)
-	                                    	
-	                                    	N1=N%(N11)
-	                                    	if N==0:
-	                                    		N11=1
-	                                    		N6=1
-	                                    	if N11==0:
-	                                    		N11=(2**24)-1
-	                                    		
-	                                 
-	                                   
-	                                    	#print(N5)
-	                                    	if N1==0 and N5!=0:
-	                                    		N6=1
+                                
                                                             
                                     Bias3=format(N2,C)
                                     	   
