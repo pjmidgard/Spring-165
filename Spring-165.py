@@ -224,10 +224,11 @@ class compression:
                                 
                                 
                                 
-                                Long_file=int(sda2[112:144],2)
-                                Times_compress=int(sda2[80:112],2)
-                                Bias_file=int(sda2[24:80],2)
-                                Divide_Number=int(sda2[0:24],2)
+                                Long_file=int(sda2[88:120],2)
+                                #print(Long_file)
+                                Times_compress=int(sda2[120:144],2)
+                                Bias_file=int(sda2[32:88],2)
+                                Divide_Number=int(sda2[0:32],2)
                                 C1="0"+str(Long_file*8)+"b"
                                 N_Start=0
                                 Start_file=""
