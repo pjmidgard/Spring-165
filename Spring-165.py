@@ -277,9 +277,9 @@ class compression:
                                     		if N==0:
                                     			B=1
                                     			N1=0
-                                    		N5=N//((2**8)-1)
+                                    		N5=N//((2**4)-1)
                                     	
-                                    		N1=N%((2**8)-1)
+                                    		N1=N%((2**4)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -347,7 +347,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=10000 or assxw3==((2**24)-1):
+                                    if len(sda2)<=800 or assxw3==((2**24)-1):
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
@@ -577,9 +577,9 @@ class compression:
                                     		if N==0:
                                     			B=1
                                     			N1=0
-                                    		N5=N//((2**8)-1)
+                                    		N5=N//((2**4)-1)
                                     	
-                                    		N1=N%((2**8)-1)
+                                    		N1=N%((2**4)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -668,7 +668,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=10000 or assxw3==((2**24)-1):
+                                    if len(sda2)<=800 or assxw3==((2**24)-1):
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
