@@ -277,9 +277,9 @@ class compression:
                                     		if N==0:
                                     			B=1
                                     			N1=0
-                                    		N5=N//((2**10)-1)
+                                    		N5=N//((2**8)-1)
                                     	
-                                    		N1=N%((2**10)-1)
+                                    		N1=N%((2**8)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -577,9 +577,9 @@ class compression:
                                     		if N==0:
                                     			B=1
                                     			N1=0
-                                    		N5=N//((2**10)-1)
+                                    		N5=N//((2**8)-1)
                                     	
-                                    		N1=N%((2**10)-1)
+                                    		N1=N%((2**8)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
