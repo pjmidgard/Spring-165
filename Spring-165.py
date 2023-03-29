@@ -347,7 +347,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=100 or assxw3==((2**24)-1):
+                                    if len(sda2)<=100 or assxw3==((2**24)-1) or B==1:
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
@@ -668,7 +668,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
-                                    if len(sda2)<=100 or assxw3==((2**24)-1):
+                                    if len(sda2)<=100 or assxw3==((2**24)-1) or B==1:
                                                                                                                                                                                                                                 
 														                                                                                      
 														                                                                                                                                                                                                                                                                   
