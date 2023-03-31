@@ -662,7 +662,7 @@ class compression:
 
                                     
                                     sda2=sda3
-                                    print(sda3)
+                                    #print(sda3)
                                     #n = int(sda2, 2)
                                                                                                     
                                             
