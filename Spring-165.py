@@ -29,6 +29,7 @@ class compression:
                     assxw1=0
                     assxw2=0
                     block2=0
+                    sda4=""
                         
                     count1=12
                     count2=0
@@ -229,25 +230,33 @@ class compression:
                                 Times_compress=int(sda2[64:88],2)
                                 
                                 Divide_Number=int(sda2[0:32],2)
+                                #print(Divide_Number)
                                 C1="0"+str(Long_file*8)+"b"
                                 N_Start=0
                                 Start_file=""
                                 Finish_file=""
                                 Finish_file1=""
                                 Finish_file2=""
-                                assxw=0
+                                
                                 Start_file=format(N_Start,C1)
                                 Finish_file1=sda2
+                              
+                                    	#print(Start_file)
+                                
                                 while Finish_file1!=Finish_file2:
-                                    if assxw==0:
-                                    	Start_file=format(N_Start,C1)
-                                    	#print(N_Start)
-                                    	sda2=Start_file
+                                    if assxw3==0:
+                                    	  
+                                    	  Start_file=format(N_Start,C1)
+                                    	  sda2=Start_file
+                                    	  
+                                    
+
                                     block3=0
                                     sda3=""
                                     sda5=""
                                     sda8=""
-                                    sda4=""
+                                    
+                                    #sda4=""
                                     
                                     count3+=1
                                     #print(count4)
@@ -301,6 +310,7 @@ class compression:
                                     C="0"+str((2**5)-1)+"b"
                                     if assxw3==0:
                                     	Bias2=format(N2,C)
+                                    	N11=Divide_Number
                                     	
                                     
                                     		
@@ -308,11 +318,9 @@ class compression:
                                     	
                                     	
                                     	
-                                    	N=int(sda2,2)
-                                    	if N==0:
-                                    	  N11=1
-                                    	else:
-                                    	  N11=Divide_Number
+                               
+                                    	
+                                        
                                     	  
                                        
                                         
@@ -330,7 +338,7 @@ class compression:
 
                                     
                                     sda2=sda3
-                                    #print(len(sda2))
+                                    #print(sda3)
                                     #n = int(sda2, 2)
                                                                                                     
                                             
@@ -347,6 +355,7 @@ class compression:
                                     #print(len(jl))
                                     
                                     assxw3+=1  
+                                    #print(assxw3)
                                     if len(sda2)<=100 or assxw3==((2**24)-1) or B==1:
                                                                                                                                                                                                                                 
 														                                                                                      
@@ -384,6 +393,8 @@ class compression:
 											                                                                                            assxw=1
 											                                                                                        else:
 											                                                                                            N_Start=N_Start+Divide_Number
+											                                                                                            
+											                                                                                            
 											                                                                                            
                                     
                                     
@@ -651,7 +662,7 @@ class compression:
 
                                     
                                     sda2=sda3
-                                    #print(len(sda2))
+                                    print(sda3)
                                     #n = int(sda2, 2)
                                                                                                     
                                             
