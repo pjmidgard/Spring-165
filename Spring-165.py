@@ -356,42 +356,29 @@ class compression:
                                     assxw3+=1  
                                     #print(assxw3)
                                     if len(sda2)<=100 or assxw3==((2**24)-1) or B==1:
-                                                                                                                                                                                                                                
-														                                                                                      
-														                                                                                                                                                                                                                                                                   
-											                                                                                        sda3="1"+Bias3+Bias2+sda3
-											                                                                                        lenf=len(sda3)
-											                                                                                        add_bits118=""
-											                                                                                        count_bits=8-lenf%8
-											                                                                                        z=0
-											                                                                                       
-											                                                                                        if count_bits!=8:
-											                                                                                                while z<count_bits:
-											                                                                                                    add_bits118="0"+add_bits118
-											                                                                                                    z=z+1
-											
-											                                                                                                    
-											                                        
-											                                                                                        
-											                                                                                        
-											                                                                                        sda3=add_bits118+sda3
-											                                                                                        
-											                                                                                        T1=format(Long_file,'032b')
-											                                                                                        T=format(assxw3,'024b')
-											                                                                                        
-											                                                                                        T4=format(N11,'032b')
-											                                                                                     
-											                                                                                      
-											                                                                                        sda3=T4+T1+T+sda3
-											                                                                                        Finish_file2=sda3
-											                                                                                        assxw3=0
-											                                                                                        #print(assxw3)
-											                                                                                        
-											                                                                                        if Finish_file1==Finish_file2:
-											                                                                                            sda3=Start_file
-											                                                                                            assxw=1
-											                                                                                        else:
-											                                                                                            N_Start=N_Start+Divide_Number
+
+                                       sda3="1"+Bias3+Bias2+sda3
+                                       lenf=len(sda3)
+                                       add_bits118=""
+                                       count_bits=8-lenf%8
+                                       z=0
+                                       if count_bits!=8:
+                                           while z<count_bits:
+                                               add_bits118="0"+add_bits118
+                                               z=z+1
+                                       sda3=add_bits118+sda3
+                                       T1=format(Long_file,'032b')
+                                       T=format(assxw3,'024b')
+                                       T4=format(N11,'032b')
+                                       sda3=T4+T1+T+sda3
+                                       Finish_file2=sda3
+                                       assxw3=0
+                                       #print(assxw3)
+                                       if Finish_file1==Finish_file2:
+                                           sda3=Start_file
+                                           assxw=1
+                                       else:
+                                           N_Start=N_Start+Divide_Number
 											                                                                                            
 											                                                                                            
 											                                                                                            
@@ -678,33 +665,22 @@ class compression:
                                     
                                     assxw3+=1  
                                     if len(sda2)<=100 or assxw3==((2**24)-1) or B==1:
-                                                                                                                                                                                                                                
-														                                                                                      
-														                                                                                                                                                                                                                                                                   
-											                                                                                        sda3="1"+Bias3+Bias2+sda3
-											                                                                                        lenf=len(sda3)
-											                                                                                        add_bits118=""
-											                                                                                        count_bits=8-lenf%8
-											                                                                                        z=0
-											                                                                                       
-											                                                                                        if count_bits!=8:
-											                                                                                                while z<count_bits:
-											                                                                                                    add_bits118="0"+add_bits118
-											                                                                                                    z=z+1
-											
-											                                                                                                    
-											                                        
-											                                                                                        
-											                                                                                        
-											                                                                                        sda3=add_bits118+sda3
-											                                                                                        assxw=1
-											                                                                                        T1=format(lenf1,'032b')
-											                                                                                        T=format(assxw3,'024b')
-											                                                                                        
-											                                                                                        T4=format(N11,'032b')
-											                                                                                     
-											                                                                                      
-											                                                                                        sda3=T4+T1+T+sda3
+
+                                        sda3="1"+Bias3+Bias2+sda3
+                                        lenf=len(sda3)
+                                        add_bits118=""
+                                        count_bits=8-lenf%8
+                                        z=0
+                                        if count_bits!=8:
+                                            while z<count_bits:
+                                                add_bits118="0"+add_bits118
+                                                z=z+1
+                                        sda3=add_bits118+sda3
+                                        assxw=1
+                                        T1=format(lenf1,'032b')
+                                        T=format(assxw3,'024b')
+                                        T4=format(N11,'032b')
+                                        sda3=T4+T1+T+sda3
                                     
                                     
                                     #print(assxw)
