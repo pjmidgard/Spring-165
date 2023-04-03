@@ -275,20 +275,19 @@ class compression:
                                     
                                     N8=len(sda2)
                                     while N1!=0:
-                                    	N2+=1
-                                    	long=len(sda2)
-                                    	long2=long-N2
-                                    	if long2<=0:
-                                        	B=1
-                                        	N1=0
-                                    	if B==0:
-                                    		N=int(sda2[:long-N2],2)
-                                    		if N==0:
-                                    			B=1
-                                    			N1=0
-                                    		N5=N//((2**4)-1)
-                                    	
-                                    		N1=N%((2**4)-1)
+                                        N2+=1
+                                        long=len(sda2)
+                                        long2=long-N2
+                                        if long2<=0:
+                                            B=1
+                                            N1=0
+                                        if B==0:
+                                            N=int(sda2[:long-N2],2)
+                                            if N==0:
+                                                B=1
+                                                N1=0
+                                            N5=N//((2**4)-1)
+                                            N1=N%((2**4)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
@@ -577,20 +576,19 @@ class compression:
                                     
                                     N8=len(sda2)
                                     while N1!=0:
-                                    	N2+=1
-                                    	long=len(sda2)
-                                    	long2=long-N2
-                                    	if long2<=0:
-                                        	B=1
-                                        	N1=0
-                                    	if B==0:
-                                    		N=int(sda2[:long-N2],2)
-                                    		if N==0:
-                                    			B=1
-                                    			N1=0
-                                    		N5=N//((2**4)-1)
-                                    	
-                                    		N1=N%((2**4)-1)
+                                        N2+=1
+                                        long=len(sda2)
+                                        long2=long-N2
+                                        if long2<=0:
+                                            B=1
+                                            N1=0
+                                        if B==0:
+                                            N=int(sda2[:long-N2],2)
+                                            if N==0:
+                                                B=1
+                                                N1=0
+                                            N5=N//((2**4)-1)
+                                            N1=N%((2**4)-1)
                                     	#print(N2)
                                     Bias=bin(N5)[2:]
                                     if N5==0:
